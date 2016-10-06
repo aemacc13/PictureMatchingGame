@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PictureMatchingGame</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_game">NEW GAME</string>
+    <string name="poke_pic_matching">Poke-Pic Matching</string>
+    <string name="continue_game">CONTINUE</string>
+    <string name="about">ABOUT</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="play_again">Would you like to play again?</string>
+    <string name="count">Count:</string>
+    <string name="previous">Previous:</string>
+    <string name="about_text">Poke-Pic Matching is the latest and greatest picture matching game out there. Win all eight gym badges to be the very best like no one ever was!</string>
+    <string name="back">Back</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/default_padding"
+    tools:context="com.example.aemacc13.picturematchinggame.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_margin"
+            android:textAlignment="center"
+            android:textSize="@dimen/small_win_text"
+            android:text="@string/about_text"/>
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            style="@style/MenuButton"/>
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_main"
+        class="com.example.aemacc13.picturematchinggame.MainFragment"/>
+</LinearLayout>

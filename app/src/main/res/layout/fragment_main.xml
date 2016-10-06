@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.aemacc13.picturematchinggame.MainFragment">
+
+    <TextView
+        android:id="@+id/poke_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/title_margin"
+        android:text="@string/poke_pic_matching"
+        android:textSize="@dimen/title_text"/>
+    
+    <Button
+        android:id="@+id/new_button"
+        android:text="@string/new_game"
+        style="@style/MenuButton"/>
+
+    <!--<Button
+        android:id="@+id/continue_button"
+        android:text="@string/continue_game"
+        style="@style/MenuButton"/>-->
+
+    <Button
+        android:id="@+id/about_button"
+        android:text="@string/about"
+        style="@style/MenuButton"/>
+
+</LinearLayout>
