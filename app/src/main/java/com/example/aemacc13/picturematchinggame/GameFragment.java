@@ -274,6 +274,7 @@ public class GameFragment extends Fragment {
         int id= resources.getIdentifier("badged" + round, "drawable", getActivity().getPackageName());
 
         //goal for each round
+        //only set background if goal is completed
         if (round == 1 && count <= 100){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 75 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
@@ -301,6 +302,7 @@ public class GameFragment extends Fragment {
             ((GameActivity)getActivity()).stoptBattleMusic();
             ((GameActivity)getActivity()).startWinMusic();
         } else {
+            //reset round number
             this.round--;
         }
     }
