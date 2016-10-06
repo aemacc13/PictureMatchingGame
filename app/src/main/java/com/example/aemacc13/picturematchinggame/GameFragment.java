@@ -49,7 +49,7 @@ public class GameFragment extends Fragment {
     //counts
     private static int count;
     private static int previousCount;
-    private static int round= 1;
+    private static int round= 0;
 
     //grid views
     GridLayout grid= null;
@@ -267,41 +267,41 @@ public class GameFragment extends Fragment {
     }
 
     public void revealBadge(int round, int count, int previousCount){
+        //add round assuming task was successful
+        round= ++this.round;
+
         Resources resources= getResources();
         int id= resources.getIdentifier("badged" + round, "drawable", getActivity().getPackageName());
 
-        //add round assuming task was successful
-        round++;
-
         //goal for each round
-        if (round > 0 && count <= 100){
+        if (round == 1 && count <= 100){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 75 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 1 && count <= 75){
+        } else if (round == 2 && count <= 75){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 50 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 2 && count <= 50){
+        } else if (round == 3 && count <= 50){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 40 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 3 && count <= 40){
+        } else if (round == 4 && count <= 40){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 30 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 4 && count <= 30){
+        } else if (round == 5 && count <= 30){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 25 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 5 && count <= 25){
+        } else if (round == 6 && count <= 25){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in less than 20 clicks to earn the next gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 6 && count <= 20){
+        } else if (round == 7 && count <= 20){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Find all the matches in exactly 16 clicks to earn the final gym badge", Toast.LENGTH_LONG).show();
-        } else if (round > 7 && count == 16){
+        } else if (round == 8 && count == 16){
             badge_image.setBackground(resources.getDrawable(id));
             Toast.makeText(getContext(), "Perfect Score!" + count, Toast.LENGTH_LONG).show();
             ((GameActivity)getActivity()).stoptBattleMusic();
             ((GameActivity)getActivity()).startWinMusic();
         } else {
-            round--;
+            this.round--;
         }
     }
 
